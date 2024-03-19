@@ -60,7 +60,7 @@
 &trans      &trans  &trans  &trans   &trans   &trans                     &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_PLAY_PAUSE   &trans  &kp HOME
 &kp TAB     &kp F1  &trans  &trans   &trans   &kp F7                     &trans     &trans            &kp UP_ARROW    &trans             &trans  &kp END
 &kp LCTRL   &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans     &kp LEFT          &kp DOWN        &kp RIGHT          &trans  &kp PG_UP
-&kp SHIFT   &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &trans     &trans            &trans          &trans             &trans  &kp PG_DN
+&kp LSHIFT  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &trans     &trans            &trans          &trans             &trans  &kp PG_DN
                            &trans   &trans   &trans   &trans    &trans  &trans     &trans            &trans
             >;
         };
