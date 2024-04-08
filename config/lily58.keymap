@@ -20,26 +20,49 @@
         };
     };
 
+    behaviors {
+        curly: curly {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CURLY";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+
+        round: round {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ROUND";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        suqare: suqare {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SUQARE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4                &kp N5                                                        &kp N6           &kp N7         &kp N8        &kp N9   &kp N0     &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E     &kp R                 &kp T                                                         &kp Y            &kp U          &kp I         &kp O    &kp P      &kp LBKT
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F                 &kp G                                                         &kp H            &kp J          &kp K         &kp L    &kp COLON  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V                 &kp B         &kp EQUAL               &kp RBKT                &kp N            &kp M          &kp COMMA     &kp DOT  &kp FSLH   &kp RSHIFT
-                           &kp LALT  &mt LEFT_COMMAND TAB  &lt 2 ESCAPE  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT RETURN  &lt 1 BACKSPACE  &mt RCTRL TAB  &kp LEFT_ALT
+&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4                &kp N5                                                        &kp N6           &kp N7     &kp N8        &kp N9   &kp N0     &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E     &kp R                 &kp T                                                         &kp Y            &kp U      &kp I         &kp O    &kp P      &kp LBKT
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F                 &kp G                                                         &kp H            &kp J      &kp K         &kp L    &kp COLON  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V                 &kp B         &kp EQUAL               &kp RBKT                &kp N            &kp M      &kp COMMA     &kp DOT  &kp FSLH   &kp RSHIFT
+                           &kp LALT  &mt LEFT_COMMAND TAB  &lt 2 ESCAPE  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT RETURN  &lt 1 BACKSPACE  &kp RCTRL  &kp LEFT_ALT
             >;
         };
 
         lower_layer {
             bindings = <
-&kp F1  &kp F2           &kp F3       &kp F4                                  &kp F5     &kp F6                       &kp F7     &kp F8        &kp F9        &kp F10       &kp F11         &kp F12
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &mt RIGHT_BRACE LEFT_BRACE              &kp AMPS   &kp PIPE                     &kp PLUS   &kp N7        &kp N8        &kp N9        &kp ASTERISK    &trans
-&trans  &kp HASH         &kp DOLLAR   &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp EQUAL  &kp GRAVE                    &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp UNDERSCORE  &trans
-&trans  &kp PERCENT      &kp CARET    &mt RIGHT_BRACKET LEFT_BRACKET          &kp PIPE   &kp TILDE  &trans    &trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH   &trans
-                                      &trans                                  &trans     &trans     &trans    &trans  &trans     &trans        &trans
+&kp F1  &kp F2           &kp F3       &kp F4   &kp F5     &kp F6                       &kp F7     &kp F8        &kp F9        &kp F10       &kp F11         &kp F12
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &curly   &kp AMPS   &kp PIPE                     &kp PLUS   &kp N7        &kp N8        &kp N9        &kp ASTERISK    &trans
+&trans  &kp HASH         &kp DOLLAR   &round   &kp EQUAL  &kp GRAVE                    &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp UNDERSCORE  &trans
+&trans  &kp PERCENT      &kp CARET    &suqare  &kp PIPE   &kp TILDE  &trans    &trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH   &trans
+                                      &trans   &trans     &trans     &trans    &trans  &trans     &trans        &trans
             >;
         };
 
