@@ -54,7 +54,7 @@
         toggle_nav: toggle_nav {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &rgb_ug RGB_COLOR_HSB(80,0,0)>;
+            bindings = <&to 2 &rgb_ug RGB_COLOR_HSB(360,86,16)>;
             label = "TOGGLE_NAV";
         };
 
