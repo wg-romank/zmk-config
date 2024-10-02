@@ -47,14 +47,14 @@
         toggle_sym: toggle_sym {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(42,93,14)>;
+            bindings = <&to 1 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(42,93,10)>;
             label = "TOGGLE_SYM";
         };
 
         toggle_nav: toggle_nav {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &rgb_ug RGB_COLOR_HSB(360,86,16)>;
+            bindings = <&to 2 &rgb_ug RGB_COLOR_HSB(0,86,10)>;
             label = "TOGGLE_NAV";
         };
 
